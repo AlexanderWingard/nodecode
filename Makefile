@@ -1,6 +1,7 @@
-NODE=https://nodejs.org/dist/v6.11.0/node-v6.11.0-linux-x64.tar.xz
-export PATH := $(shell pwd)/env/bin:$(PATH)
-export PATH := $(shell npm bin):$(PATH)
+OS=$(shell uname | tr A-Z a-z)
+NODE=https://nodejs.org/dist/v6.11.0/node-v6.11.0-$(OS)-x64.tar.xz
+YARN=https://yarnpkg.com/latest.tar.gz
+export PATH := $(shell pwd)/env/bin:$(shell npm bin):$(PATH)
 .PHONY: start install supervisor
 
 start: env/bin/npm
@@ -17,3 +18,8 @@ env/bin/npm:
 	cd env && \
 	curl -O $(NODE) && \
 	tar xf `basename $(NODE)` --strip 1
+
+env/bin/yarn:
+	mkdir -p env && \
+	cd env && \
+	curl -L $(YARN) | tar xvz --strip 1

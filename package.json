@@ -1,10 +1,14 @@
 {
-    "name": "nodecode",
-    "version": "0.0.1",
-    "dependencies": {
-        "express": ""
-    },
-    "devDependencies": {
-        "supervisor": ""
-    }
+  "name": "nodecode",
+  "version": "0.0.1",
+  "dependencies": {
+    "d3": "^4.9.1",
+    "express": ""
+  },
+  "devDependencies": {
+    "style-loader": "",
+    "css-loader": "",
+    "webpack": "",
+    "webpack-dev-server": ""
+  }
 }
