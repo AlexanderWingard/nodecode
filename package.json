@@ -1,0 +1,10 @@
+{
+    "name": "nodecode",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": ""
+    },
+    "devDependencies": {
+        "supervisor": ""
+    }
+}
