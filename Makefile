@@ -1,13 +1,13 @@
 OS=$(shell uname | tr A-Z a-z)
 NODE=https://nodejs.org/dist/v6.11.0/node-v6.11.0-$(OS)-x64.tar.xz
 YARN=https://yarnpkg.com/latest.tar.gz
-export PATH := $(shell pwd)/env/bin:$(shell env/bin/npm bin):$(PATH)
+export PATH := $(shell pwd)/env/bin:$(shell pwd)/node_modules/.bin:$(PATH)
 .PHONY: start install supervisor
 
-start: env/bin/npm
+start: node_modules/.bin/webpack-dev-server
 	webpack-dev-server --open
 
-install: env/bin/npm
+node_modules/.bin/webpack-dev-server: env/bin/npm
 	npm install
 
 supervisor: env/bin/npm
