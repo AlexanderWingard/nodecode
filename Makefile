@@ -3,6 +3,8 @@ NODE=https://nodejs.org/dist/v6.11.0/node-v6.11.0-$(OS)-x64.tar.xz
 YARN=https://yarnpkg.com/latest.tar.gz
 ifeq ($(shell lsb_release -is), Ubuntu)
 	MONGO=https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-3.4.5.tgz
+else ifeq($(shell uname), Darwin)
+	MONGO=https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.4.6.tgz
 else
 	MONGO=https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel62-3.4.5.tgz
 endif
