@@ -1,7 +1,10 @@
 const webpack = require("webpack");
 
 module.exports = {
-    "entry": "./src/index.js",
+    "entry": [
+        "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000",
+        "./src/index.js"
+    ],
     "plugins": [
         new webpack.HotModuleReplacementPlugin()
     ],

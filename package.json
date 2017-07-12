@@ -3,17 +3,13 @@
   "version": "0.0.1",
   "dependencies": {
     "d3": "^4.9.1",
-    "express": ""
+    "express": "^4.15.3"
   },
   "devDependencies": {
-    "css-loader": "",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-concurrent": "^2.3.1",
-    "grunt-shell": "^2.1.0",
-    "grunt-webpack": "^3.0.0",
-    "style-loader": "",
-    "webpack": "",
-    "webpack-dev-server": ""
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.2.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-hot-middleware": "^2.18.2"
   }
 }
