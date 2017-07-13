@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "d3": "^4.9.1",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "express-ws": "^3.0.0"
   },
   "devDependencies": {
     "css-loader": "^0.28.4",
